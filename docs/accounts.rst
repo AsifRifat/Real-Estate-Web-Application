@@ -44,6 +44,14 @@ accounts.tests module
    :undoc-members:
    :show-inheritance:
 
+accounts.urls module
+--------------------
+
+.. automodule:: accounts.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 accounts.views module
 ---------------------
 

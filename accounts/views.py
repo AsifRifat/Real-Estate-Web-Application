@@ -5,9 +5,21 @@ from rest_framework.views import APIView
 from rest_framework import permissions
 
 class SignupView(APIView):
+    """
+    Class-Based Signup View.
+
+    """
     permission_classes = (permissions.AllowAny, )
 
     def post(self, request, format=None):
+        """
+        This function allows to post request user account data.
+
+        :param request: 
+        :param format: defaults to None
+        :return: response either succes or error
+        :rtype: json
+        """
         data = self.request.data
 
         name = data['name']
@@ -17,14 +29,14 @@ class SignupView(APIView):
 
         if password == password2:
             if User.objects.filter(email=email).exists():
-                return Response({'error': 'Email already exists'})
+                return Response({'error': 'Email already exists. Enter a new email.'})
             else:
                 if len(password) < 6:
-                    return Response({'error': 'Password must be at least 6 characters'})
+                    return Response({'error': 'Password must be at least 6 characters.'})
                 else:
                     user = User.objects.create_user(email=email, password=password, name=name)
 
                     user.save()
-                    return Response({'success': 'User created successfully'})
+                    return Response({'success': 'User created successfully.'})
         else:
-            return Response({'error': 'Passwords do not match'})
+            return Response({'error': 'Passwords do not match.'})
