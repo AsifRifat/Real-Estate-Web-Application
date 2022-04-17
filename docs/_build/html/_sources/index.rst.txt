@@ -5,14 +5,12 @@
 
 Welcome to Real Estate Web Application's documentation!
 =======================================================
-.. automodule:: accounts.models
-   :members:
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   #modules
+   modules
 
 
 Indices and tables

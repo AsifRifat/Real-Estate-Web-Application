@@ -60,7 +60,7 @@ class Listing(models.Model):
 
     def __str__(self):
         """
-        Returns String representation of object
+        This function returns string representation of object
 
         """
         return self.title
