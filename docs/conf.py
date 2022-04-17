@@ -12,16 +12,23 @@
 #
 import os
 import sys
+import sphinx_rtd_theme
 sys.path.insert(0, os.path.abspath('..'))
-import accounts
-import realtors
 
+#di = os.path.abspath(os.pardir)
+#remove_doc = di.strip('docs')
+
+#for root,directory,files in os.walk(r'D:\Study Materials\Spring 2022\CSE327\backup_project\Real-Estate-Web-Application'):
+#    sys.path.append(r'D:/Study Materials/Spring 2022/CSE327/backup_project/Real-Estate-Web-Application/')
+
+#import accounts
+#import realtors
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'Real Estate Web Application'
-copyright = '2022, AR, SH, SR, SA'
+copyright = '2022, AR, SH, SN, SA'
 author = 'AR, SH, SN, SA'
 
 # The full version, including alpha/beta/rc tags
@@ -42,8 +49,11 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
               'sphinx.ext.githubpages',
-              'sphinx.ext.napoleon'
+              'sphinx.ext.napoleon',
+
 ]
+
+html_show_sourcelink = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -59,9 +69,11 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = []
+html_static_path = ['_static']

@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 class UserAccountManager(BaseUserManager):
     """
-    Class to create all types of user accounts.
+    This class is responsible for creating all types of user accounts.
     """
     def create_user(self, email, name, password=None):
         """
