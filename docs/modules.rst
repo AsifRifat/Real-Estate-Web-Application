@@ -21,3 +21,11 @@ post_ads
    :maxdepth: 4
 
    post_ads
+
+filter_ads
+==========
+
+.. toctree::
+   :maxdepth: 4
+
+   filter_ads

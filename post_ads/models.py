@@ -35,7 +35,7 @@ class Listing(models.Model):
     sale_type = models.CharField(max_length=50, choices=SaleType.choices, default=SaleType.FOR_SALE)
     price = models.IntegerField()
     bedrooms = models.IntegerField()
-    bathrooms = models.DecimalField(max_digits=2, decimal_places=1)
+    bathrooms = models.IntegerField()
     home_type = models.CharField(max_length=50, choices=HomeType.choices, default=HomeType.FLAT)
     sqft = models.IntegerField()
     open_house = models.BooleanField(default=False)

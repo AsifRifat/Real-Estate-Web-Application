@@ -2,8 +2,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import permissions
-from post_ads.models import Listing
-from post_ads.serializers import ListingSerializer, ListingDetailSerializer
+from .models import Listing
+from .serializers import ListingSerializer
 from datetime import datetime, timezone, timedelta
 
 class FilterView(APIView):
@@ -77,15 +77,15 @@ class FilterView(APIView):
 
         bathrooms = data['bathrooms']
         if bathrooms == '0+':
-            bathrooms = 0.0
+            bathrooms = 0
         elif bathrooms == '1+':
-            bathrooms = 1.0
+            bathrooms = 1
         elif bathrooms == '2+':
-            bathrooms = 2.0
+            bathrooms = 2
         elif bathrooms == '3+':
-            bathrooms = 3.0
+            bathrooms = 3
         elif bathrooms == '4+':
-            bathrooms = 4.0
+            bathrooms = 4
         
         queryset = queryset.filter(bathrooms__gte=bathrooms)
 
@@ -99,9 +99,9 @@ class FilterView(APIView):
         elif sqft == '2000+':
             sqft = 2000
         elif sqft == 'Any':
-            sqft = 0
+            sqft = -1
         
-        if sqft != 0:
+        if sqft != -1:
             queryset = queryset.filter(sqft__gte=sqft)
         
         days_passed = data['days_listed']

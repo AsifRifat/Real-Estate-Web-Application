@@ -47,19 +47,20 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#realtors-admin-module">realtors.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-realtors.admin">realtors.admin module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-realtors.apps">realtors.apps module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#realtors-models-module">realtors.models module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#realtors-serializers-module">realtors.serializers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-realtors.models">realtors.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-realtors.serializers">realtors.serializers module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-realtors.tests">realtors.tests module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#realtors-urls-module">realtors.urls module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#realtors-views-module">realtors.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-realtors.urls">realtors.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-realtors.views">realtors.views module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-realtors">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html#post-ads">post_ads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html#filter-ads">filter_ads</a></li>
 </ul>
 
         </div>
@@ -105,8 +106,40 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </section>
-<section id="realtors-admin-module">
-<h2>realtors.admin module<a class="headerlink" href="#realtors-admin-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-realtors.admin">
+<span id="realtors-admin-module"></span><h2>realtors.admin module<a class="headerlink" href="#module-realtors.admin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="realtors.admin.RealtorAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">realtors.admin.</span></span><span class="sig-name descname"><span class="pre">RealtorAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/realtors/admin.html#RealtorAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#realtors.admin.RealtorAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<p>This class shows list of realtors in admin portal</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.admin.RealtorAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'name',</span> <span class="pre">'email',</span> <span class="pre">'date_hired')</span></em><a class="headerlink" href="#realtors.admin.RealtorAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.admin.RealtorAdmin.list_display_links">
+<span class="sig-name descname"><span class="pre">list_display_links</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'name')</span></em><a class="headerlink" href="#realtors.admin.RealtorAdmin.list_display_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.admin.RealtorAdmin.list_per_page">
+<span class="sig-name descname"><span class="pre">list_per_page</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#realtors.admin.RealtorAdmin.list_per_page" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="realtors.admin.RealtorAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#realtors.admin.RealtorAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.admin.RealtorAdmin.search_fields">
+<span class="sig-name descname"><span class="pre">search_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('name',)</span></em><a class="headerlink" href="#realtors.admin.RealtorAdmin.search_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-realtors.apps">
 <span id="realtors-apps-module"></span><h2>realtors.apps module<a class="headerlink" href="#module-realtors.apps" title="Permalink to this headline">¶</a></h2>
@@ -127,20 +160,224 @@
 </dd></dl>
 
 </section>
-<section id="realtors-models-module">
-<h2>realtors.models module<a class="headerlink" href="#realtors-models-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-realtors.models">
+<span id="realtors-models-module"></span><h2>realtors.models module<a class="headerlink" href="#module-realtors.models" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="realtors.models.Realtor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">realtors.models.</span></span><span class="sig-name descname"><span class="pre">Realtor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/realtors/models.html#Realtor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#realtors.models.Realtor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>This class is used for creating real estate agent profile along with overall description.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="realtors.models.Realtor.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#realtors.models.Realtor.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="realtors.models.Realtor.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#realtors.models.Realtor.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.date_hired">
+<span class="sig-name descname"><span class="pre">date_hired</span></span><a class="headerlink" href="#realtors.models.Realtor.date_hired" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#realtors.models.Realtor.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#realtors.models.Realtor.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="realtors.models.Realtor.get_next_by_date_hired">
+<span class="sig-name descname"><span class="pre">get_next_by_date_hired</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date_hired&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#realtors.models.Realtor.get_next_by_date_hired" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="realtors.models.Realtor.get_previous_by_date_hired">
+<span class="sig-name descname"><span class="pre">get_previous_by_date_hired</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date_hired&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#realtors.models.Realtor.get_previous_by_date_hired" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#realtors.models.Realtor.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.listing_set">
+<span class="sig-name descname"><span class="pre">listing_set</span></span><a class="headerlink" href="#realtors.models.Realtor.listing_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#realtors.models.Realtor.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#realtors.models.Realtor.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.phone">
+<span class="sig-name descname"><span class="pre">phone</span></span><a class="headerlink" href="#realtors.models.Realtor.phone" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.photo">
+<span class="sig-name descname"><span class="pre">photo</span></span><a class="headerlink" href="#realtors.models.Realtor.photo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.models.Realtor.top_seller">
+<span class="sig-name descname"><span class="pre">top_seller</span></span><a class="headerlink" href="#realtors.models.Realtor.top_seller" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="realtors-serializers-module">
-<h2>realtors.serializers module<a class="headerlink" href="#realtors-serializers-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-realtors.serializers">
+<span id="realtors-serializers-module"></span><h2>realtors.serializers module<a class="headerlink" href="#module-realtors.serializers" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="realtors.serializers.RealtorSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">realtors.serializers.</span></span><span class="sig-name descname"><span class="pre">RealtorSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/realtors/serializers.html#RealtorSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#realtors.serializers.RealtorSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.ModelSerializer</span></code></p>
+<p>This class provides a shortcut that creates a Serializer class with fields
+that correspond to the Model fields.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="realtors.serializers.RealtorSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/realtors/serializers.html#RealtorSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#realtors.serializers.RealtorSerializer.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.serializers.RealtorSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__all__'</span></em><a class="headerlink" href="#realtors.serializers.RealtorSerializer.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.serializers.RealtorSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#realtors.serializers.RealtorSerializer.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#realtors.models.Realtor" title="realtors.models.Realtor"><code class="xref py py-class docutils literal notranslate"><span class="pre">realtors.models.Realtor</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-realtors.tests">
 <span id="realtors-tests-module"></span><h2>realtors.tests module<a class="headerlink" href="#module-realtors.tests" title="Permalink to this headline">¶</a></h2>
 </section>
-<section id="realtors-urls-module">
-<h2>realtors.urls module<a class="headerlink" href="#realtors-urls-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-realtors.urls">
+<span id="realtors-urls-module"></span><h2>realtors.urls module<a class="headerlink" href="#module-realtors.urls" title="Permalink to this headline">¶</a></h2>
 </section>
-<section id="realtors-views-module">
-<h2>realtors.views module<a class="headerlink" href="#realtors-views-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-realtors.views">
+<span id="realtors-views-module"></span><h2>realtors.views module<a class="headerlink" href="#module-realtors.views" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="realtors.views.RealtorListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">realtors.views.</span></span><span class="sig-name descname"><span class="pre">RealtorListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/realtors/views.html#RealtorListView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#realtors.views.RealtorListView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.generics.ListAPIView</span></code></p>
+<p>This class is used for retrieving the list of all realtors in database.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.RealtorListView.pagination_class">
+<span class="sig-name descname"><span class="pre">pagination_class</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#realtors.views.RealtorListView.pagination_class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.RealtorListView.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'rest_framework.permissions.AllowAny'&gt;,)</span></em><a class="headerlink" href="#realtors.views.RealtorListView.permission_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.RealtorListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Realtor:</span> <span class="pre">Mr</span> <span class="pre">A&gt;,</span> <span class="pre">&lt;Realtor:</span> <span class="pre">Mr</span> <span class="pre">C&gt;,</span> <span class="pre">&lt;Realtor:</span> <span class="pre">Mr</span> <span class="pre">B&gt;]&gt;</span></em><a class="headerlink" href="#realtors.views.RealtorListView.queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.RealtorListView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#realtors.views.RealtorListView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#realtors.serializers.RealtorSerializer" title="realtors.serializers.RealtorSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">realtors.serializers.RealtorSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="realtors.views.RealtorView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">realtors.views.</span></span><span class="sig-name descname"><span class="pre">RealtorView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/realtors/views.html#RealtorView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#realtors.views.RealtorView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.generics.RetrieveAPIView</span></code></p>
+<p>This class is used for retrieving a single realtor by id in database.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.RealtorView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Realtor:</span> <span class="pre">Mr</span> <span class="pre">A&gt;,</span> <span class="pre">&lt;Realtor:</span> <span class="pre">Mr</span> <span class="pre">C&gt;,</span> <span class="pre">&lt;Realtor:</span> <span class="pre">Mr</span> <span class="pre">B&gt;]&gt;</span></em><a class="headerlink" href="#realtors.views.RealtorView.queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.RealtorView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#realtors.views.RealtorView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#realtors.serializers.RealtorSerializer" title="realtors.serializers.RealtorSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">realtors.serializers.RealtorSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="realtors.views.TopSellerView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">realtors.views.</span></span><span class="sig-name descname"><span class="pre">TopSellerView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/realtors/views.html#TopSellerView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#realtors.views.TopSellerView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.generics.ListAPIView</span></code></p>
+<p>This class is used for retrieving top seller realtor in database</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.TopSellerView.pagination_class">
+<span class="sig-name descname"><span class="pre">pagination_class</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#realtors.views.TopSellerView.pagination_class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.TopSellerView.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'rest_framework.permissions.AllowAny'&gt;,)</span></em><a class="headerlink" href="#realtors.views.TopSellerView.permission_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.TopSellerView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Realtor:</span> <span class="pre">Mr</span> <span class="pre">B&gt;]&gt;</span></em><a class="headerlink" href="#realtors.views.TopSellerView.queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="realtors.views.TopSellerView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#realtors.views.TopSellerView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#realtors.serializers.RealtorSerializer" title="realtors.serializers.RealtorSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">realtors.serializers.RealtorSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-realtors">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-realtors" title="Permalink to this headline">¶</a></h2>

@@ -12,8 +12,11 @@
 #
 import os
 import sys
+import django
 import sphinx_rtd_theme
 sys.path.insert(0, os.path.abspath('..'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'real_estate.settings'
+django.setup()
 
 #di = os.path.abspath(os.pardir)
 #remove_doc = di.strip('docs')
