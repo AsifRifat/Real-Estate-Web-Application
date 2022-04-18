@@ -103,22 +103,26 @@
         <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">sale_type__iexact</span><span class="o">=</span><span class="n">sale_type</span><span class="p">)</span>
 
         <span class="n">price</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;$0+&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT0+&#39;</span><span class="p">:</span>
             <span class="n">price</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;$200,000+&#39;</span><span class="p">:</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="mi">200000</span>
-        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;$400,000+&#39;</span><span class="p">:</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="mi">400000</span>
-        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;$600,000+&#39;</span><span class="p">:</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="mi">600000</span>
-        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;$800,000+&#39;</span><span class="p">:</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="mi">800000</span>
-        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;$1,000,000+&#39;</span><span class="p">:</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="mi">1000000</span>
-        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;$1,200,000+&#39;</span><span class="p">:</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="mi">1200000</span>
-        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;$1,500,000+&#39;</span><span class="p">:</span>
-            <span class="n">price</span> <span class="o">=</span> <span class="mi">1500000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT5000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">5000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT10000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">10000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT15000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">15000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT20000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">20000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT25000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">25000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT30000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">30000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT50000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">50000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT70000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">70000</span>
+        <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;BDT100000+&#39;</span><span class="p">:</span>
+            <span class="n">price</span> <span class="o">=</span> <span class="mi">100000</span>
         <span class="k">elif</span> <span class="n">price</span> <span class="o">==</span> <span class="s1">&#39;Any&#39;</span><span class="p">:</span>
             <span class="n">price</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
         
@@ -159,7 +163,9 @@
         <span class="n">queryset</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">bathrooms__gte</span><span class="o">=</span><span class="n">bathrooms</span><span class="p">)</span>
 
         <span class="n">sqft</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sqft&#39;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">sqft</span> <span class="o">==</span> <span class="s1">&#39;1000+&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">sqft</span> <span class="o">==</span> <span class="s1">&#39;500+&#39;</span><span class="p">:</span>
+            <span class="n">sqft</span> <span class="o">=</span> <span class="mi">500</span>
+        <span class="k">elif</span> <span class="n">sqft</span> <span class="o">==</span> <span class="s1">&#39;1000+&#39;</span><span class="p">:</span>
             <span class="n">sqft</span> <span class="o">=</span> <span class="mi">1000</span>
         <span class="k">elif</span> <span class="n">sqft</span> <span class="o">==</span> <span class="s1">&#39;1200+&#39;</span><span class="p">:</span>
             <span class="n">sqft</span> <span class="o">=</span> <span class="mi">1200</span>
