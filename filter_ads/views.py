@@ -34,22 +34,26 @@ class FilterView(APIView):
         queryset = queryset.filter(sale_type__iexact=sale_type)
 
         price = data['price']
-        if price == '$0+':
+        if price == 'BDT0+':
             price = 0
-        elif price == '$200,000+':
-            price = 200000
-        elif price == '$400,000+':
-            price = 400000
-        elif price == '$600,000+':
-            price = 600000
-        elif price == '$800,000+':
-            price = 800000
-        elif price == '$1,000,000+':
-            price = 1000000
-        elif price == '$1,200,000+':
-            price = 1200000
-        elif price == '$1,500,000+':
-            price = 1500000
+        elif price == 'BDT5000+':
+            price = 5000
+        elif price == 'BDT10000+':
+            price = 10000
+        elif price == 'BDT15000+':
+            price = 15000
+        elif price == 'BDT20000+':
+            price = 20000
+        elif price == 'BDT25000+':
+            price = 25000
+        elif price == 'BDT30000+':
+            price = 30000
+        elif price == 'BDT50000+':
+            price = 50000
+        elif price == 'BDT70000+':
+            price = 70000
+        elif price == 'BDT100000+':
+            price = 100000
         elif price == 'Any':
             price = -1
         
@@ -90,7 +94,9 @@ class FilterView(APIView):
         queryset = queryset.filter(bathrooms__gte=bathrooms)
 
         sqft = data['sqft']
-        if sqft == '1000+':
+        if sqft == '500+':
+            sqft = 500
+        elif sqft == '1000+':
             sqft = 1000
         elif sqft == '1200+':
             sqft = 1200
