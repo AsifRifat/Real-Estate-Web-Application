@@ -77,10 +77,10 @@
 
 <div class="viewcode-block" id="FilterView"><a class="viewcode-back" href="../../filter_ads.html#filter_ads.views.FilterView">[docs]</a><span class="k">class</span> <span class="nc">FilterView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This class performs filtering opertion based on some criterias.</span>
-
-<span class="sd">    :param APIView: _description_</span>
-<span class="sd">    :type APIView:</span>
+<span class="sd">    This class performs filtering opertion based on some criterias such as sale_type,</span>
+<span class="sd">    price, no of bedrooms, no of bathrooms, area of the property, posted date e.t.c.</span>
+<span class="sd">    :param APIView: APIView</span>
+<span class="sd">    :type APIView: url response</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">(</span><span class="n">permissions</span><span class="o">.</span><span class="n">AllowAny</span><span class="p">,</span> <span class="p">)</span>
     <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">ListingSerializer</span>
@@ -89,10 +89,10 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This function allows to post request filtered listings.</span>
 
-<span class="sd">        :param request: _description_</span>
-<span class="sd">        :type request: _type_</span>
-<span class="sd">        :param format: _description_, defaults to None</span>
-<span class="sd">        :type format: _type_, optional</span>
+<span class="sd">        :param request: request</span>
+<span class="sd">        :type request: object</span>
+<span class="sd">        :param format: defaults to None</span>
+<span class="sd">        :type format: optional</span>
 <span class="sd">        :return: query set of filtered listings</span>
 <span class="sd">        :rtype: json</span>
 <span class="sd">        &quot;&quot;&quot;</span>

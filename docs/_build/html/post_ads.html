@@ -112,10 +112,11 @@
 <dt class="sig sig-object py" id="post_ads.admin.ListingAdmin">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">post_ads.admin.</span></span><span class="sig-name descname"><span class="pre">ListingAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/post_ads/admin.html#ListingAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#post_ads.admin.ListingAdmin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
-<p>This class shows the list of ads in admin portal</p>
+<p>This class shows the list of ads owned by realtors in admin portal.
+The posted listings are editable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>admin</strong> – </p>
+<dd class="field-odd"><p><strong>admin</strong> – administartor</p>
 </dd>
 </dl>
 <dl class="py attribute">
@@ -574,6 +575,36 @@ object the first time, the query is executed.</p>
 </section>
 <section id="module-post_ads.tests">
 <span id="post-ads-tests-module"></span><h2>post_ads.tests module<a class="headerlink" href="#module-post_ads.tests" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="post_ads.tests.ListingTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">post_ads.tests.</span></span><span class="sig-name descname"><span class="pre">ListingTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/post_ads/tests.html#ListingTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#post_ads.tests.ListingTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>This class is for testing post_ads models functioning properly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>TestCase</strong> – </p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="post_ads.tests.ListingTest.test_address">
+<span class="sig-name descname"><span class="pre">test_address</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/post_ads/tests.html#ListingTest.test_address"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#post_ads.tests.ListingTest.test_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function tests whether created post returns corresponding address.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="post_ads.tests.ListingTest.test_price">
+<span class="sig-name descname"><span class="pre">test_price</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/post_ads/tests.html#ListingTest.test_price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#post_ads.tests.ListingTest.test_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function tests whether created post returns corresponding price of property/rent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="post_ads.tests.ListingTest.test_setUp">
+<span class="sig-name descname"><span class="pre">test_setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/post_ads/tests.html#ListingTest.test_setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#post_ads.tests.ListingTest.test_setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates two listing objects for testing.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-post_ads.urls">
 <span id="post-ads-urls-module"></span><h2>post_ads.urls module<a class="headerlink" href="#module-post_ads.urls" title="Permalink to this headline">¶</a></h2>
@@ -614,7 +645,7 @@ which need to be authenticated.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">post_ads.views.</span></span><span class="sig-name descname"><span class="pre">ListingsView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/post_ads/views.html#ListingsView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#post_ads.views.ListingsView" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.generics.ListAPIView</span></code></p>
 <p>This class allow user to view posted ads ordered by published dates
-without any authentication</p>
+without any authentication.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ListAPIView</strong> – </p>

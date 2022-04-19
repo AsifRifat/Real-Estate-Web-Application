@@ -8,10 +8,11 @@ from datetime import datetime, timezone, timedelta
 
 class FilterView(APIView):
     """
-    This class performs filtering opertion based on some criterias.
-
-    :param APIView: _description_
-    :type APIView:
+    This class performs filtering opertion based on some criterias such as sale_type,
+    price, no of bedrooms, no of bathrooms, area of the property, posted date e.t.c.
+    
+    :param APIView: APIView
+    :type APIView: url response
     """
     permission_classes = (permissions.AllowAny, )
     serializer_class = ListingSerializer
@@ -20,10 +21,10 @@ class FilterView(APIView):
         """
         This function allows to post request filtered listings.
 
-        :param request: _description_
-        :type request: _type_
-        :param format: _description_, defaults to None
-        :type format: _type_, optional
+        :param request: request
+        :type request: object
+        :param format: defaults to None
+        :type format: optional
         :return: query set of filtered listings
         :rtype: json
         """

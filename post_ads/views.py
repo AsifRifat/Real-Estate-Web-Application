@@ -9,7 +9,7 @@ from datetime import datetime, timezone, timedelta
 class ListingsView(ListAPIView):
     """
     This class allow user to view posted ads ordered by published dates
-    without any authentication
+    without any authentication.
 
     :param ListAPIView:
     """

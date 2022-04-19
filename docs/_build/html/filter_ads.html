@@ -147,12 +147,10 @@
 <dt class="sig sig-object py" id="filter_ads.views.FilterView">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">filter_ads.views.</span></span><span class="sig-name descname"><span class="pre">FilterView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/filter_ads/views.html#FilterView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#filter_ads.views.FilterView" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.views.APIView</span></code></p>
-<p>This class performs filtering opertion based on some criterias.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>APIView</strong> – _description_</p>
-</dd>
-</dl>
+<p>This class performs filtering opertion based on some criterias such as sale_type,
+price, no of bedrooms, no of bathrooms, area of the property, posted date e.t.c.
+:param APIView: APIView
+:type APIView: url response</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="filter_ads.views.FilterView.permission_classes">
 <span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'rest_framework.permissions.AllowAny'&gt;,)</span></em><a class="headerlink" href="#filter_ads.views.FilterView.permission_classes" title="Permalink to this definition">¶</a></dt>
@@ -165,8 +163,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>request</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>format</strong> (<em>_type_</em><em>, </em><em>optional</em>) – _description_, defaults to None</p></li>
+<li><p><strong>request</strong> (<em>object</em>) – request</p></li>
+<li><p><strong>format</strong> (<em>optional</em>) – defaults to None</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

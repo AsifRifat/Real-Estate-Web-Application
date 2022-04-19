@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>post_ads.tests &mdash; Real Estate Web Application 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Real Estate Web Application
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">accounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#realtors">realtors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#post-ads">post_ads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#filter-ads">filter_ads</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Real Estate Web Application</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>post_ads.tests</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for post_ads.tests</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">from</span> <span class="nn">django.test</span> <span class="kn">import</span> <span class="n">TestCase</span>
+<span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Listing</span>
+<span class="kn">from</span> <span class="nn">realtors.models</span> <span class="kn">import</span> <span class="n">Realtor</span>
+<span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">ListingsView</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;DJANGO_SETTINGS_MODULE&#39;</span><span class="p">,</span> <span class="s1">&#39;real_estate.settings&#39;</span><span class="p">)</span>
+<span class="n">setup</span><span class="p">()</span>
+
+<div class="viewcode-block" id="ListingTest"><a class="viewcode-back" href="../../post_ads.html#post_ads.tests.ListingTest">[docs]</a><span class="k">class</span> <span class="nc">ListingTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class is for testing post_ads models functioning properly.</span>
+
+<span class="sd">    :param TestCase:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ListingTest.test_setUp"><a class="viewcode-back" href="../../post_ads.html#post_ads.tests.ListingTest.test_setUp">[docs]</a>    <span class="k">def</span> <span class="nf">test_setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function creates two listing objects for testing.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Listing</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">realtor</span> <span class="o">=</span> <span class="s1">&#39;Mr B&#39;</span><span class="p">,</span><span class="n">slug</span> <span class="o">=</span> <span class="s1">&#39;lucrative-apartment-in-Banani&#39;</span><span class="p">,</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;2000sqft-apartment-in-Banani&#39;</span><span class="p">,</span><span class="n">address</span> <span class="o">=</span> <span class="s1">&#39;34, Banani&#39;</span><span class="p">,</span><span class="n">city</span> <span class="o">=</span> <span class="s1">&#39;Dhaka&#39;</span><span class="p">,</span>
+        <span class="n">sale_type</span> <span class="o">=</span> <span class="s1">&#39;For Rent&#39;</span><span class="p">,</span> <span class="n">price</span> <span class="o">=</span> <span class="mi">27000</span><span class="p">,</span> <span class="n">bedrooms</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">bathrooms</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">home_type</span> <span class="o">=</span> <span class="s1">&#39;Apartment&#39;</span><span class="p">,</span><span class="n">sqft</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span>
+
+        <span class="n">Listing</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">realtor</span> <span class="o">=</span> <span class="s1">&#39;Mr C&#39;</span><span class="p">,</span><span class="n">slug</span> <span class="o">=</span> <span class="s1">&#39;cheap-plot-in-Uttara&#39;</span><span class="p">,</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;3-katha-plot-in-Uttara&#39;</span><span class="p">,</span><span class="n">address</span> <span class="o">=</span> <span class="s1">&#39;13/A, Uttara&#39;</span><span class="p">,</span><span class="n">city</span> <span class="o">=</span> <span class="s1">&#39;Dhaka&#39;</span><span class="p">,</span>
+        <span class="n">sale_type</span> <span class="o">=</span> <span class="s1">&#39;For Sale&#39;</span><span class="p">,</span> <span class="n">price</span> <span class="o">=</span> <span class="mi">18900000</span><span class="p">,</span> <span class="n">home_type</span> <span class="o">=</span> <span class="s1">&#39;Plot&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ListingTest.test_address"><a class="viewcode-back" href="../../post_ads.html#post_ads.tests.ListingTest.test_address">[docs]</a>    <span class="k">def</span> <span class="nf">test_address</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function tests whether created post returns corresponding address.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">post1</span> <span class="o">=</span> <span class="n">Listing</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">post2</span> <span class="o">=</span> <span class="n">Listing</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">post1</span><span class="o">.</span><span class="n">address</span><span class="p">,</span> <span class="s1">&#39;34, Banani&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">post2</span><span class="o">.</span><span class="n">address</span><span class="p">,</span> <span class="s1">&#39;13/A, Uttara&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ListingTest.test_price"><a class="viewcode-back" href="../../post_ads.html#post_ads.tests.ListingTest.test_price">[docs]</a>    <span class="k">def</span> <span class="nf">test_price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function tests whether created post returns corresponding price of property/rent.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">post1</span> <span class="o">=</span> <span class="n">Listing</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">post2</span> <span class="o">=</span> <span class="n">Listing</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">post1</span><span class="o">.</span><span class="n">price</span><span class="p">,</span> <span class="mi">27000</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">post2</span><span class="o">.</span><span class="n">price</span><span class="p">,</span> <span class="mi">18900000</span><span class="p">)</span></div></div>
+        
+
+    
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AR, SH, SN, SA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

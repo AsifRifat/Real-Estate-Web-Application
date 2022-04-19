@@ -72,9 +72,10 @@
 
 <div class="viewcode-block" id="ListingAdmin"><a class="viewcode-back" href="../../post_ads.html#post_ads.admin.ListingAdmin">[docs]</a><span class="k">class</span> <span class="nc">ListingAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This class shows the list of ads in admin portal</span>
+<span class="sd">    This class shows the list of ads owned by realtors in admin portal.</span>
+<span class="sd">    The posted listings are editable.</span>
 
-<span class="sd">    :param admin:</span>
+<span class="sd">    :param admin: administartor</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;is_published&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;list_date&#39;</span><span class="p">,</span> <span class="s1">&#39;realtor&#39;</span><span class="p">)</span>
     <span class="n">list_display_links</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">)</span>
