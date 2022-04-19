@@ -44,6 +44,9 @@ class ListingTest(TestCase):
         post2 = Listing.objects.get(id=2)
         self.assertEqual(post1.price, 27000)
         self.assertEqual(post2.price, 18900000)
+
+if __name__ == '__main__':
+   unittest.main()
         
 
     
